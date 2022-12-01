@@ -1,0 +1,52 @@
+@import '../abstracts/variables.scss';
+
+.subscribe-form-wrap {
+    @media screen and (min-width: $desktop) {
+       width: 50%;
+       padding-left: 15px;
+    }
+}
+
+.subscribe-form {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 14px;
+        font-size: 16px;
+        line-height: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: none;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: $white-color;
+
+        &:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        &::-webkit-input-placeholder {
+            color: #acacb0;
+        }
+
+        &::-moz-placeholder {
+            color: #acacb0;
+        }
+
+        &:-ms-input-placeholder {
+            color: #acacb0;
+        }
+
+        &:-moz-placeholder {
+            color: #acacb0;
+        }
+    }
+}

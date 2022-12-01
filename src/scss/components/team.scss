@@ -1,0 +1,79 @@
+@import '../abstracts/variables.scss';
+
+.team {
+    margin-bottom: $mobile-margin;
+    padding: $mobile-margin 0;
+    background: #F5F4FA;
+    
+    @media screen and (min-width: $desktop) {
+        margin-bottom: $desktop-margin;
+        padding: $desktop-margin 0;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        background: $white-color;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 4px 4px;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: $mobile-margin;
+        }
+
+        @media screen and (min-width: $tablet) {
+            width: calc(50% - 15px);
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: auto;
+            flex: 1 1 0;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__desc {
+        padding: 30px 24px 24px;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__position {
+        margin: 0 0 16px;
+        color: $secondary-color;
+        letter-spacing: 0.03em;
+
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
